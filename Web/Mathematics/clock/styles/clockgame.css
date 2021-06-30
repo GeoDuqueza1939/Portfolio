@@ -1,0 +1,350 @@
+body {
+	font-family: "Calibri", sans-serif;
+}
+/* Mode Selection */
+.mode-selection {
+	border-bottom: 0.2em double;
+	margin: 0 0 1em;
+	padding: 1em 0.1em;
+	background-color: white;
+	position: relative;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+/* Clock Demo */
+#clock-demo-wrapper {
+	padding-top: 0.25em;
+	text-align: center;
+}
+.clock-demo {
+}
+/* Clock */
+.clock-wrapper {
+	display: inline-block;
+	min-width: 5em;
+	width: 30%;
+}
+span.clock {
+	display: block;
+	text-align: center;
+	border: 0.2em double ridge;
+	border-radius: 3em;
+	padding: 0.5em;
+}
+span.clock>svg.clock-face {
+	display: inline-block;
+}
+.clock-demo>* {
+	vertical-align: middle;
+}
+/* Clock Sizer */
+input#clock-size {
+	width: 5em;
+}
+/* Clock Controls */
+.clock-basic-controls, .clock-game-controls {
+	display: inline-block;
+	padding: 1em;
+	margin: auto 1em;
+	border: 0.2em double;
+	border-radius: 1em;
+}
+
+/* Clock Basic Controls */
+.clock-basic-controls {
+	display: none;
+	visibility: hidden;
+	margin-bottom: 3em;
+	max-width: 20em;
+	font-size: 1em;
+	line-height: 1.75;
+}
+.widget-mode .clock-basic-controls {
+	display: inline-block;
+	visibility: visible;
+}
+
+
+/* Clock Game Controls */
+.clock-game-controls {
+	max-width: 15em;
+	font-size: 1em;
+}
+.widget-mode .clock-game-controls {	
+	display: none;
+	visibility: hidden;
+}
+.clock-game-controls p {
+	text-align: justify;
+	font-size: 1em;
+}
+label[for=time-value-response] {
+	display: block;
+	font-size: 1.25em;
+	font-weight: bold;
+}
+.time-component {
+	font-size: 1.25em;
+	line-height: 2;
+}
+.game-mode .time-value {
+	display: none;
+	visibility: hidden;
+}
+.time-value input {
+	width: 2em;
+	text-align: right;
+}
+.time-value input#hour-value {
+	width: 1.9em;
+}
+/* Instruction Mode */	
+p.interactive-instruction {
+	margin-bottom: 1em;
+}
+.game-mode p.interactive-instruction {
+	display: none;
+	visibility: hidden;	
+}
+/* Game Mode */	
+p.game-instruction {
+	display: none;
+	visibility: hidden;	
+	margin-bottom: 1em;
+}
+.game-mode p.game-instruction {
+	display: block;
+	visibility: visible;	
+}
+#game-control {
+	display: none;
+	visibility: hidden;		
+	margin: 2em auto;
+	font-size: 1.25em;
+}
+.game-mode #game-control {
+	display: initial;
+	visibility: visible;
+}
+.difficulty-setting-wrapper {
+	display: none;
+	visibility: hidden;
+	margin: 0 auto 1em;
+	vertical-align: middle;
+	line-height: 1;
+}
+.game-mode .difficulty-setting-wrapper {
+	display: block;
+	visibility: visible;
+}
+.time-component input[type=time], .time-component button#submit, .time-component span#item-number, .time-component span#score {
+	display: none;
+	visibility: hidden;
+	
+}
+.game-mode .time-component input[type=time], .game-mode .time-component button#submit, .game-mode .time-component span#item-number, .game-mode .time-component span#score {
+	display: initial;
+	visibility: visible;	
+}
+.time-component input[type=time] {
+	font-size: 1.25em;
+}
+button#submit {
+	font-size: 1em;
+}
+.score {
+	display: none;
+	visibility: hidden;	
+	border: 0.2em double red;
+	padding: 0.1em 0.2em;
+	margin: 2em 0em;
+	font-size: 0.8em;
+	font-weight: bold;
+	float: right;
+}
+.score::before {
+	content: "Score: ";
+}
+.game-mode .score {
+	display: inline-block;
+	visibility: visible;	
+}
+.item-number {
+	display: none;
+	visibility: hidden;	
+	border: 0.2em double blue;
+	padding: 0.1em 0.2em;
+	margin: 2em 0em;
+	font-size: 0.8em;
+	font-weight: bold;
+	float: left;
+}
+.item-number::before {
+	content: "Item #";
+}
+.game-mode .item-number {
+	display: inline-block;
+	visibility: visible;	
+}
+/*
+.clock-demo {
+    text-align: center;
+	margin: 0;
+}
+	margin-top: 1em;
+.clock-basic-controls {
+    display: none;
+    visibility: hidden;
+}
+.widget-mode .clock-basic-controls {
+    display: inherit;
+    visibility: visible;
+}
+.clock-game-controls {
+    font-size: 1.5em;
+	font-weight: bold;
+	line-height: 1.5;
+	border: 0.15em double black;
+	border-radius: 1em;
+	padding: 1em;
+	width: 11em;
+	margin-left: 1em;
+}
+.clock-wrapper, .clock-game-controls {
+    vertical-align: baseline;
+}
+.clock-wrapper,.clock-game-controls {
+    display: inline-block;
+    vertical-align: middle;
+}
+.widget-mode .clock-game-controls {
+    display: none;
+    visibility: hidden;
+}
+.widget-mode .clock-wrapper {
+    display: block;
+}
+.game-mode .time-value {
+	display: none;
+	visibility: hidden;
+}
+#time-value-response {
+	display: none;
+	visibility: hidden;
+}
+.game-mode #time-value-response {
+	display: initial;
+	visibility: visible;
+}
+.time-component {
+    text-align: center;
+}
+.time-component input[type=time] {
+	font-size: 1.15em;
+}
+.time-component input[type=number] {
+    width: 2em;
+}
+.time-component input#hour-value {
+    width: 1.75em;
+    text-align: right;
+}
+.time-component button {
+	font-size: 1em;
+	margin-top: 0.4em;
+	display: none;
+	visibility: hidden;
+}
+.game-mode .time-component button {
+	display: initial;
+	visibility: visible;
+}
+.interactive-instruction {
+	font-size: 0.66667em;
+	font-weight: normal;
+	text-align: justify;
+}
+.widget-mode .interactive-instruction, .game-mode .interactive-instruction {
+	display: none;
+	visibility: hidden;
+}
+.game-instruction {
+	display: none;
+	visibility: hidden;
+	font-size: 0.66667em;
+	font-weight: normal;
+	text-align: justify;
+}
+.game-mode .game-instruction {
+	display: block;
+	visibility: visible;	
+}
+#score {
+	display: none;
+	visibility: hidden;	
+	border: 0.2em double red;
+	padding: 0.1em 0.2em;
+	margin: 2em 0em;
+	font-size: 0.8em;
+	float: right;
+}
+#score::before {
+	content: "Score: ";
+}
+.game-mode #score {
+	display: inline-block;
+	visibility: visible;	
+}
+#item-number {
+	display: none;
+	visibility: hidden;	
+	border: 0.2em double blue;
+	padding: 0.1em 0.2em;
+	margin: 2em 0em;
+	font-size: 0.8em;
+	float: left;
+}
+#item-number::before {
+	content: "Item #";
+}
+.game-mode #item-number {
+	display: inline-block;
+	visibility: visible;	
+}
+#submit {
+	
+}
+label[for=time-value-response]{
+	display: block;
+	font-size: 0.8em;
+	clear: both;
+}
+.game-mode label[for=time-value-response]{
+	margin-top: 1em;
+}
+label[for=difficulty-setting] {
+	font-size: 0.8em;
+	clear: both;
+	margin-top: 1em;
+}
+.difficulty-setting-wrapper {
+	display: none;
+	visibility: hidden;
+}
+.game-mode .difficulty-setting-wrapper {
+	display: block;
+	visibility: visible;
+}
+#game-control {
+	display: none;
+	visibility: hidden;
+	font-size: 1em;
+	clear: both;
+	margin: 1em auto;
+}
+.game-mode #game-control {
+	display: initial;
+	visibility: visible;
+}
+*/

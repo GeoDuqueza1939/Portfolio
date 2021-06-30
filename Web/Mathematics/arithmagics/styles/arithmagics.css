@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.arithmagics {
+    display: flex;
+    margin: 0 auto;
+    /* outline: 1px dotted red; */
+    width: 640px;
+    height: 480px;
+    border: 2px inset;
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    background-color: rgb(10, 56, 4);
+}
+
+.arithmagics > * {
+    background-color: white;
+}
+
+.arithmagics-splash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px outset;
+    width: 75%;
+    height: 75%;
+}
+
+.arithmagics-main {
+    padding: 0.5em;
+    border: 2px outset;
+    background-color: lightgray;
+}
+
+.arithmagics-main > form {
+    display: flex;
+    justify-content: center;
+}
+
+.arithmagics-main-digitsize input[type=number] {
+    width: 3em;
+}
+
+.arithmagics-main-buttons {
+    padding: 1em 0.5em;
+}
+
+.arithmagics-quiz {
+    padding: 1em;
+    border: 2px outset;
+    background-color: #FFFFFF88;
+}
+
+.arithmagics-quiz-item-list {
+    margin: 0;
+    padding: 0;
+    column-count: 2;
+}
+
+.arithmagics-quiz-item {
+    margin-left: 2em;
+    padding-left: 0.5em;
+    line-height: 2;
+}
+
+.arithmagics-quiz-item-blank {
+    width: 5em;
+}
+
+.arithmagics-quiz-buttons {
+    padding: 1em 0 0;
+    text-align: center;
+}
+
+.mathexp {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.25em;
+}
+
+.input-label {
+    white-space: nowrap;
+}
+
+.check-mark {
+    display: inline-block;
+    color: red;
+    width: 1em;
+}
+
+.check-mark.correct {
+    color: green;
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}

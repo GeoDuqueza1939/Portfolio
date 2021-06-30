@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Primes</title>
+<link href="../styles/default.css" type="text/css" rel="stylesheet" />
+<style>
+form#controls input[type=text] {width: 3em;}
+div#display {
+    white-space: pre;
+    text-align: center;
+}
+table#prime-sieve {
+    display: inline-table;
+    font-size: 1.5em;
+    font-family: "Cambria", serif;
+    border-collapse: uncollapse;
+}
+table#prime-sieve > * > tr > td {
+    padding: 0;
+    height: 2em;
+    width: 2em;
+    text-align: center;
+    border: 2px solid;
+    cursor: pointer;
+}
+table#prime-sieve > * > tr > td:hover {font-weight: bold; border-style: outset; background-color: lightgray;}
+table#prime-sieve > * > tr > td:active {font-weight: bold; border-style: inset;}
+table#prime-sieve > caption {font-family: sans-serif; font-size: 1.2em; font-weight: bold; text-transform: uppercase;}
+
+div#gamestatus {display: inline-block; vertical-align: middle; border: 5px double black; height: 2em; padding: 0.2em; margin: 2em 0 0 1em; line-height: 1; height: 3em;}
+div#gamestatus p {padding: 0; margin: 0; line-height: 1;}
+
+body.demomode #game-controls, body.demomode #gamestatus {display: none; visibility: hidden;}
+body.gamemode #demo-controls {display: none; visibility: hidden;}
+
+.prime {background-color: lightgreen;}
+.composite {background-color: #ff5555;}
+.special {background-color: lightgray;}
+
+.primes {background-color: lightgreen;}
+.cross-out {background-color: white;}
+.cross-out1 {background-color: #f00;}
+.cross-out2 {background-color: #0f0;}
+.cross-out3 {background-color: #00f;}
+.cross-out4 {background-color: #800;}
+.cross-out5 {background-color: #080;}
+.cross-out6 {background-color: #008;}
+.cross-out7 {background-color: #f88;}
+.cross-out8 {background-color: #088;}
+</style>
+<script src="scripts/prime.js" language="javascript" type="text/javascript"></script>
+<script src="scripts/primedemo.js" language="javascript" type="text/javascript"></script>
+<script src="../scripts/gamemode.js" language="javascript" type="text/javascript"></script>
+</head>
+<body id="body" class="demomode" onLoad="initDisplay();">
+<form class="mode-selection">
+<input type="radio" id="demomode" name="mode" checked="checked" onClick="checkMode(this);" /> <label for="demomode">Demo Mode</label>
+<input type="radio" id="gamemode" name="mode" onClick="checkMode(this);" /> <label for="gamemode">Game Mode</label>
+</form>
+<form id="controls">
+<div id="demo-controls">
+<label for="cols">Number of columns:</label> <input id="cols" type="text" value="10" />
+<label for="max">Maximum:</label> <input id="max" type="text" value="100" />
+<label for="rep">Replacement character:</label> <input id="rep" type="text" value="&cross;" /><br /><!--✗-->
+<select id="opt">
+<option value="all">Display all numbers</option>
+<option value="primes">Display primes only</option>
+<option value="composites">Display composites only</option>
+</select>
+<input type="button" value="Update" onClick="displayPrimes();" />
+<input type="button" value="Animate" onClick="animateSieve();" />
+<input type="button" value="Reset" onClick="initDisplay();" />
+</div>
+<div id="game-controls">
+<p>Direction: Find all the prime numbers on the list below. Click on the number to select.</p>
+</div>
+</form>
+<div id="display">
+<div id="gamestatus">
+<p>Prime numbers left: <span id="primecount">0</span></p>
+</div>
+</div>
+</body>
+<script language="javascript" type="text/javascript">
+</script>
+</html>

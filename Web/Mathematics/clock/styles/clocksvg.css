@@ -1,0 +1,16 @@
+span.clock {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+	line-height: 1;
+}
+span.clock>svg.clock-face {
+    margin: 0;
+    padding: 0;
+}
+span.clock>svg.clock-face text.text-hour-markers>tspan {
+    fill: black;
+    font-family: "Calibri", sans-serif;
+    font-size: 0.5em;
+    font-weight: bold;
+}
